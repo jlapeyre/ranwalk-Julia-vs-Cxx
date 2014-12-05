@@ -1,0 +1,9 @@
+# Do one random walk
+# 1. Using ternary op is a bit more efficient than using if and else.
+# 2. Using randbool() ? 1:-1 is much more efficient than rand() < 0.5
+# 3. Using randbool() is very much more efficient, twice faster.
+
+
+//    int res = rand();
+//    double res = rand()/ (double) RAND_MAX;
+//if (res > RAND_MAX/2)
