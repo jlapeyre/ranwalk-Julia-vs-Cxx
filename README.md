@@ -4,6 +4,7 @@ This code compares the performance of [Julia](http://julialang.org)
 and [C++-11](http://en.wikipedia.org/wiki/C%2B%2B11)
 in a [Monte Carlo simulation](http://en.wikipedia.org/wiki/Monte_Carlo_method)
 of a [random walk](http://en.wikipedia.org/wiki/Random_walk).
+The Julia code runs three times faster than the C++ code.
 
 The code records a statistic of a one dimensional random walker using
 the [Mersenne Twister
@@ -15,10 +16,11 @@ RNG](http://en.wikipedia.org/wiki/Mersenne_twister).
 * 1.27s  Julia v0.3
 * 1.68s  Julia v0.4
 
-The Julia code runs much faster than the C++ code. This is similar to other
-testimonies: I heard about Julia and decided to test it. It takes a few minutes
-to learn, a few minutes to code an example, and the results are astonishing. I
-had been putting off moving from perl to python. Now, I don't have to.
+
+This is similar to other testimonies: I heard about Julia and decided
+to test it. It takes a few minutes to learn, a few minutes to code an
+example, and the results are astonishing. I had been putting off
+moving from perl to python. Now, I don't have to.
 
 #### Running the comparison
 
