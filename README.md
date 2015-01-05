@@ -37,6 +37,8 @@ In linux/unix the test is done like this:
 
 (The outputs are histograms that can be plotted.)
 
+Using the `g++` flag `-march=native` results in slower code.
+
 The efficiency of the timed portion of both programs depends only on
 the speed of generating random numbers, checking the result, and
 incrementing counters.  It is certainly possible to write a faster
