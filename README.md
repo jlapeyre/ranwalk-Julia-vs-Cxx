@@ -26,7 +26,7 @@ Julia is very useful.
 
 A caveat on interpreting the results. This does not support the general statement
 "Julia is faster than C++". In fact, in this particular example, the bulk of
-the time is spent generating random numbers. It means something more like: 1) Julia
+the time is spent generating random numbers. It means something more like: 1) Presently, Julia
 is much faster than the gnu C++-11 template library at sampling Boolean random variables.
 2) If loops and function calls etc. are slower in Julia, the effect is very small
 compared to the relative efficiency of the RNGs.
