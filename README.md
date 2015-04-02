@@ -24,7 +24,7 @@ moving from perl to python. Now, I don't have to. EDIT: There is a *lot*
 of technical software written in python. So in fact, calling python from
 Julia is very useful.
 
-The result quoted uses the Julia code [rwtest_simple.jl](rwtest.jl), and the c++ code
+The result quoted uses the Julia code [rwtest_simple.jl](rwtest_simple.jl), and the c++ code
 [rwtest_simple.cc](rwtest_simple.cc). The other code (not "simple") is more complicated
 as it tests how various changes affect effciency.
 
