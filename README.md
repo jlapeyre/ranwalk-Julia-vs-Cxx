@@ -20,13 +20,22 @@ RNG](http://en.wikipedia.org/wiki/Mersenne_twister).
 This is similar to other testimonies: I heard about Julia and decided
 to test it. It takes a few minutes to learn, a few minutes to code an
 example, and the results are astonishing. I had been putting off
-moving from perl to python. Now, I don't have to.
+moving from perl to python. Now, I don't have to. EDIT: There is a *lot*
+of technical software written in python. So in fact, calling python from
+Julia is very useful.
+
+A caveat on interpreting the results. This does not support the general statement
+"Julia is faster than C++". In fact, in this particular example, the bulk of
+the time is spent generating random numbers. It means something more like: 1) Julia
+is much faster than the gnu C++-11 template library at sampling Boolean random variables.
+2) If loops and function calls etc. are slower in Julia, the effect is very small
+compared to the relative efficiency of the RNGs.
 
 #### Running the comparison
 
 The idea is to write the code in a straightforward, idiomatic, yet efficient way.
 C++-11 improves on C and previous C++ versions by including high-quality RNG's
-in the interface to the standard library, although it is stil a bit of a PITA
+in the interface to the standard library, although it is still a bit of a PITA
 to use them.
 
 In linux/unix the test is done like this:
@@ -57,3 +66,8 @@ ways to increase the speed of the C++ code.
 There are also files `rwtest.jl` and `rwtest.cc`, which are slightly
 more complicated. In particular, `rwtest.jl` works with the development
 versions, v0.4, of Julia as well as v0.3.
+p
+<!--  LocalWords:  Mersenne RNG perl RNG's linux unix rwtest cout txt
+ -->
+<!--  LocalWords:  julia jl jout incrementing RNGs
+ -->
