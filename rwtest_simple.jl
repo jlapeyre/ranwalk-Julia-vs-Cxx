@@ -8,25 +8,25 @@ const num_trials = 100000
 function onewalk(num_coin_flips)
     num_heads = 0
     for i in 1:num_coin_flips
-        num_heads += randbool()
+        num_heads += rand(Bool)
     end
     num_tails = num_coin_flips - num_heads
     return num_heads - num_tails
 end
 
-function run_walks (num_trials, num_steps, counts_on_lattice_sites)
+function run_walks(num_trials, num_steps, counts_on_lattice_sites)
     time = @elapsed for i in 1:num_trials
         # translate final displacement to be >= 1
-        final_displacement = onewalk(num_steps)+num_steps+1  
+        final_displacement = onewalk(num_steps)+num_steps+1
         counts_on_lattice_sites[final_displacement] += 1
     end
-    println(STDERR, "julia onewalk : $time")
+   println(stderr, "julia onewalk : $time")
 end
 
-function print_walks (num_trials, counts_on_lattice_sites)
+function print_walks(num_trials, counts_on_lattice_sites)
     n = length(counts_on_lattice_sites)
     for i in 1:n
-        counts_on_lattice_sites[i] > 0 ? 
+        counts_on_lattice_sites[i] > 0 ?
          println(i-(n+1)/2, " ", counts_on_lattice_sites[i]/num_trials) : nothing
     end
 end
